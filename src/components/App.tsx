@@ -1,11 +1,14 @@
-import { Movies } from '@app/components/movies'
+import { ThemeProvider } from 'styled-components'
+
+import { Movies } from '@app/containers/movies'
+import { theme } from './theme'
 import './App.css'
 
 function App() {
 	return (
-		<div className="App">
+		<ThemeProvider theme={theme.light}>
 			<Movies />
-		</div>
+		</ThemeProvider>
 	)
 }
 
